@@ -1,0 +1,134 @@
+*{ margin: 0; padding: 0; }
+a{
+	text-decoration: none;
+	color: #333333;
+}
+.clear{
+	 clear: both;
+	  }
+.content{
+	position: absolute;
+	left: 0;
+	top:-126px;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 490px;
+	height: 255px;
+	font-family: Georgia, serif; 
+  color: #3a3a3a; 
+	background: #C7D6E5;
+	border-radius: 20px;
+	border:1px solid #556B2F;
+	box-shadow: 4px 4px 4px #556B2F;
+}
+
+.content .login_font{
+	width: 100px;
+	height: 40px;
+	background:rgba(255,255,255,0.8);
+	border: 1px solid #556B2F;
+	border-top: 0px;
+	position: absolute;
+	left: 40px;
+	top:-15px;
+	z-index: 3;
+}
+
+.content .zhezhao{
+	position: absolute;
+	left: 40px;
+	top:-15px;
+	text-align: center;
+	background:rgba(255,255,255,0.8);
+	width: 102px;
+	height: 14px;
+	z-index: 4;
+}
+.content p{
+	position: absolute;
+	left: 52px;
+	top:-15px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 24px;
+	z-index: 5;
+}
+.content img{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+form{
+		position: absolute;
+		z-index: 2;
+		margin-left: 42px;
+		margin-top: 70px;
+	 	width: 406px; 
+	  }
+label{ 
+	width: 115px; 
+	text-align: right; 
+	float: left; 
+	margin: 0 10px 0 0; 
+	padding: 9px 0 0 0; 
+	font-size: 16px; 
+	}
+
+input{ 
+	width: 220px; 
+	display: block; 
+	padding: 4px; 
+	margin: 0 0 10px 0; 
+	font-size: 18px;
+	color: #3a3a3a; 
+	}
+input[type=checkbox]{ 
+	width: 20px; 
+	display: inline-block; 
+	}					  
+.button	{ 
+	background: url(../img/button-bg.png) repeat-x top center;
+  border: 1px solid #999;
+	-moz-border-radius: 5px; padding: 5px; color: black;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	font-size: 13px;
+	width: 70px;
+	height: 28px;
+	cursor: pointer;
+	position: absolute;
+	left:188px;
+	top: 103px;
+	 }
+.button:hover{ background: white; color: black; }
+
+.zhuceBut{
+	background: #FFFFFF;
+	border: 1px solid #999;
+	font-size: 13px;
+	width: 70px;
+	height: 28px;
+	border-radius: 5px;
+	position: absolute;
+	font-weight: bold;
+	left: 285px;
+	top: 103px;
+}
+.zhuceBut:hover{
+	background: url(../img/button-bg.png) repeat-x top center;
+}
+.zhuceBut a{
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	margin: 0 auto;
+	width: 70px;
+	height: 25px;
+}
+.loginTime{
+	display: inline-block;
+	width:168px;
+	height: 30px;
+	margin-top: 20px;
+}

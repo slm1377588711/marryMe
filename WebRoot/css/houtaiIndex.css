@@ -1,0 +1,284 @@
+@charset "utf-8";
+html{ padding:0; margin:0; font-family:Tahoma, Geneva, 'Simsun';}
+body, form, ul, li, img,h1,h2,h3,h4,h5,h6{margin:0; padding:0; border:none}
+div, span,a, td, font{ font-size:9pt;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+a{
+	text-decoration: none;
+	color: #556B2F ;
+}
+a:hover{
+	text-decoration: underline;
+}
+.show{
+	width:100%;
+	height:100%;
+	display:none;
+}
+.mengceng{
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.4);
+}
+.loginout{
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:400px;
+	height:200px;
+	background-color: #fff;
+	margin:auto;
+	z-index:10000;
+	border-radius:2px;
+}
+.loginout span{
+	display:inline-block;
+	width:340px;
+	position: absolute;
+	left:28px;
+	top:50px;
+	font-size:18px;
+	font-family: "宋体";
+}
+.loginout button{
+	position: absolute;
+	top:135px;
+	border:0px;
+	width:80px;
+	height:30px;
+	background-color:red;
+	color:#fff;
+	border-radius:3px;
+	cursor:pointer;
+}
+.loginout .butt1{
+	left:192px;
+}
+.loginout .butt2{
+	left:288px;
+	background-color:#ccc;
+}
+/*顶部导航样式 start*/
+.marryme-header{
+	height:59px;
+	width:100%;
+	min-width:1000px;
+	border-bottom:1px solid #dde4e7;
+	background: LavenderBlush;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 1000;
+}
+.marryme-header .logo{
+	float:left;
+	height:59px;
+	width:210px;
+	background: url(../img/marrymelogo.png) no-repeat;
+	background-size: auto 59px;
+}
+.marryme-header .logo a{
+	display: inline-block;
+	height:59px;
+	width:210px;
+	text-indent: -999px;
+}
+.marryme-header .title{
+	float:left;
+	height: 59px;
+	line-height: 59px;
+	font-size: 16px;
+    color: #556B2F;
+    font-weight: bold;
+    
+}
+.marryme-header .list-item{
+	float:right;
+	width:200px;
+	height:59px;
+}
+.marryme-header .login-info{
+	float:right;
+	height:59px;
+	max-width:135px;
+	padding:0 16px;
+	margin-right:30px;
+	position:relative;
+}
+.marryme-header .login-info:hover{
+	background: #f0f3f3;
+}
+.marryme-header .panel {
+	border:1px solid #ccc;
+	box-shadow: 0px 4px 9px #ccc;
+	background: #fff;
+	position:absolute;
+	top:51px;
+	left:8px;
+	display:none;
+}
+.marryme-header .panel .sanjiao{
+	width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position:absolute;
+	top:-6px;
+	left:43px;
+	z-index: 999;
+}
+.marryme-header .panel:after{
+	content:"";
+	width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    position:absolute;
+	top:-7px;
+	left:43px;
+	z-index: 998;
+}
+.marryme-header .panel ul{
+	list-style: none;
+	padding:5px;
+}
+.marryme-header .panel ul li.line{
+	border-bottom:1px solid #ccc;
+}
+.marryme-header .panel ul li a{
+	display:block;
+	width:81px;
+	height:26px;
+	line-height: 26px;
+	text-align: center;
+	margin:5px;
+}
+.marryme-header .panel ul li a:hover{
+	background:#f0f3f3 ;
+}
+
+.marryme-header .list-item{
+	list-style: none;
+}
+.marryme-header .list-item li{
+	float:left;
+}
+.marryme-header .list-item li a{
+	display: inline-block;
+	height:59px;
+	line-height: 59px;
+	margin-right:30px;
+	font-size:14px;
+	font-weight: bold;
+}
+.marryme-header .login-info a{
+	display: inline-block;
+	height:59px;
+	line-height: 59px;
+	font-size:14px;
+	font-weight: bold;
+}
+
+/*左侧导航样式start*/
+.marryme-left{
+	position:fixed;
+	top:60px;
+	left: 0px;
+	width:210px;
+	height:800px;
+	background: Thistle/*LavenderBlush;*/
+}
+.marryme-left .title{
+	height:50px;
+	line-height:50px;
+	padding:0 20px;
+}
+.marryme-left .title img{
+	width:28px;
+	height:28px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right:10px;
+}
+.marryme-left .title span{
+	vertical-align: middle;
+	color:#889fb9;
+}
+.nav .nav-item span{
+	display:block;
+	height:37px;
+	line-height: 37px;
+	background: Plum;/*LavenderBlush;*/
+	color:Crimson;
+	font-size:14px;
+	padding-left:28px;
+}
+.nav-item-list{
+	display:none;
+}
+.nav .nav-item li a{
+	display:block;
+	height:37px;
+	line-height: 37px;
+	color: PaleGoldenrod;
+    background: Plum;
+    padding-left:48px;
+}
+
+.nav .nav-item li a:hover{
+	background: Thistle;
+	color: #FFFFFF;
+}
+.nav .nav-item li{
+	position:relative;
+}
+.nav .nav-item li.active:after{
+	content:"";
+	width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid LavenderBlush;
+    border-bottom: 7px solid transparent;
+    position:absolute;
+    top:12px;
+    right:0px;
+}
+/*左侧导航end*/
+
+/*右侧内容区start*/
+.marryme-right{
+	position:absolute;
+	left:210px;
+	top:60px;
+}
+/*右侧页脚*/
+.marryme-right .marryme-right-bottom{
+	height:60px;
+	line-height: 60px;
+	background: #283644;
+	color:#707e8c;
+	text-align: center;
+}
+/*右侧内容自动填充*/
+.marryme-right .marryme-right-content{
+	background: #ffffcc;
+	margin:20px;
+	padding: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+/*右侧内容区end*/

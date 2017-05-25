@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>marry</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 配置查看在线人数监听器 -->
+	<listener>
+		<listener-class>com.marry.listener.OnlineListener</listener-class>
+	</listener>
+	
+	<!-- 配置加载链接数据库监听器 -->
+	<listener>
+		<listener-class>com.marry.listener.ApplicationListener</listener-class>
+	</listener>
+	<!-- 编码过滤 -->
+	<filter>
+		<filter-name>Encoding</filter-name>
+		<filter-class>com.marry.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 后台登录过滤器配置 -->
+	<filter>
+		<filter-name>houtailogin</filter-name>
+		<filter-class>com.marry.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>houtailogin</filter-name>
+		<url-pattern>/page/*</url-pattern>
+	</filter-mapping>
+	<!-- 错误页面配置 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/page/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/page/error/404.jsp</location>
+	</error-page>
+	<!-- 验证码配置描述 -->
+  <servlet>
+    <servlet-name>ImageServlet</servlet-name>
+	<servlet-class>com.bdyc.verifycode.ImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageServlet</servlet-name>
+    <url-pattern>/verifyCode.jpg</url-pattern>
+  </servlet-mapping>
+  	<!-- 业务处理 -->
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>com.marry.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>BaseServlet</servlet-name>
+		<servlet-class>com.marry.servlet.BaseServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.marry.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MarryServlet</servlet-name>
+    <servlet-class>com.marry.servlet.MarryServlet</servlet-class>
+  </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/user/UserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BaseServlet</servlet-name>
+		<url-pattern>/user/BaseServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/admin/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MarryServlet</servlet-name>
+    <url-pattern>/marry/MarryServlet</url-pattern>
+  </servlet-mapping>
+	
+</web-app>

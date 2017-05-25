@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.loginContent{
+				position: fixed;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				margin: auto;
+				width: 500px;
+				height: 500px;
+				z-index: 999999;
+			}
+			ul li{
+				list-style: none;
+				float: left;
+				width: 100px;
+				margin-right:15px ;
+				margin-top:5px ;
+				font-size:14px;
+				cursor: pointer;
+			}
+			ul li:first-child{
+				color: green;
+				font-size:16px;
+				font-weight: bold;
+			}
+			#model{
+				position: fixed;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				background:rgba(f,f,f,0.8);
+			}
+		</style>
+	</head>
+	<body>
+		<!--模态框-->
+		<div id="model"></div>
+		<!--点击字样-->
+		<div class="loginContent">
+			<ul>
+				<li onclick="login()">登录</li>
+				<li onclick="zhuce()">注册</li>
+			</ul>
+			<!--加载内容区-->
+			<div class="login"></div>
+		</div>
+		<script>
+		/*页面加载成功后显示登录页面*/
+		$(function(){
+			$(".login").load("login1.jsp");
+		});
+		/*登录的点击事件*/
+		function login(){
+				//单击登录时给登录添加样式
+				$("ul li:first-child").css({
+					"color":"green",
+					"font-size":"16px",
+					"font-weight": "bold"
+				});
+				//单击登录并且添还原注册的样式
+				$("ul li:last-child").css({
+					"color":"black",
+					"font-size":"12px",
+				});
+				//加载登录页面
+				$(".login").load("login1.jsp");
+			}
+		/*注册的点击事件*/
+			function zhuce(){
+				//单击注册时并且还原登录的样式
+				$("ul li:first-child").css({
+					"color":"black",
+					"font-size":"12px",
+				});
+				//单击注册时给注册添加样式
+				$("ul li:last-child").css({
+					"color":"green",
+					"font-size":"16px",
+					"font-weight": "bold"
+				});
+				$(".login").load("zhuce.jsp");
+			}
+			//单击模态框时，隐藏nav页面用于加载登录注册页面的div
+			$("#model").click(function(){
+				 $("#loadloginmodel").hide(); 
+				
+			});
+		</script> 
+	</body>
+</html>

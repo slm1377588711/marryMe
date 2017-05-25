@@ -1,0 +1,122 @@
+@charset "utf-8";
+html{ padding:0; margin:0; font-family:Tahoma, Geneva, 'Simsun';}
+body, form, ul, li, img{margin:0; padding:0; border:none}
+div, span,a, td, font{ font-size:9pt;}
+.login_body{
+	background-image: url(../img/login_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.login_container{
+	width:500px;
+	border:1px solid #fff;
+	background-color:#fff;
+	height: 300px;
+	margin:150px auto;
+	border-radius: 8px;
+}
+.login_container .login_title{
+	width:100%;
+	height:80px;
+	margin:10px 0 15px 0;
+	border-bottom:1px solid #eee;
+}
+.login_container .login_title .login_title_center{
+	width:400px;
+	margin:0 auto;
+}
+.login_container .login_title img{
+	height:50px;
+	vertical-align: middle;
+}
+.login_container .login_title span{
+	font-size: 25px;
+    line-height: 80px;
+    vertical-align: middle;
+    font-family: 'Microsoft Yahei',Tahoma, Geneva, 'Simsun';
+}
+
+.login_container .login_form{
+	width:400px;
+	margin:0 auto;
+}
+.login_container .login_form label{
+	display:inline-block;
+	width:100px;
+	text-align: center;
+	font-weight: bold;
+}
+.login_container .login_form input{
+	width:255px;
+	background-color: #fff;
+    border: 1px solid #ccc;
+    height: 18px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #555;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.login_container .login_form select{
+	height: 28px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+.login_container .login_form .code{
+	background-color: #fff;
+    border: 1px solid #ccc;
+    width:50px;
+    height: 18px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    margin-left:10px;
+}
+.login_container .login_form .code_img{
+	vertical-align: middle;
+	cursor:pointer;
+	position:relative;
+	top:-42px;
+	left:174px
+}
+.login_container .login_form .login_btn{
+	display:inline-block;
+	width:150px;
+	height:30px;
+	background:#0076cc;
+	color:#fff;
+	margin-left:100px;
+	margin-top:-72px;
+	cursor:pointer;
+}
+.login_container .login_form .reg_btn{
+	width:100px;
+	height:30px;
+	background:#ececec;
+	color:#333;
+	margin-top:-72px;
+	cursor:pointer;
+}
+
+#password{
+	background:url(../img/lock.png) no-repeat;
+	background-position: 248px center;
+	padding-right:30px;
+	width:230px;
+}
+
+.login_content #error{
+	display: inline-block;
+	float: right;
+	margin-top:-55px;
+	margin-right: 8px;
+	color:red;
+}
